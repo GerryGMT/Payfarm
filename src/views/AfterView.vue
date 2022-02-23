@@ -16,7 +16,7 @@
 
       <router-link to="/">
         <div class="pa-4">
-          <v-btn color="#53C351" height="35"> Log Out </v-btn>
+          <v-btn color="#53C351" height="35" dark> Log Out </v-btn>
         </div>
       </router-link>
     </v-app-bar>

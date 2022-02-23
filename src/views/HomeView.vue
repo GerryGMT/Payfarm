@@ -13,7 +13,7 @@
       <v-spacer></v-spacer>
 
       <router-link to="/registration">
-        <v-btn color="#53C351" height="35"> Login </v-btn>
+        <v-btn color="#53C351" height="35" dark> Login </v-btn>
       </router-link>
     </v-app-bar>
 

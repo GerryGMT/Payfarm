@@ -14,7 +14,7 @@
 
       <router-link to="/signin">
         <div class="pa-4">
-          <v-btn color="#53C351" height="35"> Login </v-btn>
+          <v-btn color="#53C351" height="35" dark> Login </v-btn>
         </div>
       </router-link>
     </v-app-bar>
