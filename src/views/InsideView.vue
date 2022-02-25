@@ -11,18 +11,18 @@
       </div>
 
       <v-spacer />
-      <p>Good afternoon, Koffi Olomide</p>
+      <p class="greeting">Good afternoon, Koffi Olomide</p>
       <v-spacer />
 
-      <router-link to="/after">
-        <div class="pa-4">
+      <router-link to="/after" tag="span">
+        <div>
           <v-btn color="#53C351" height="35" dark> Log Out </v-btn>
         </div>
       </router-link>
     </v-app-bar>
 
     <v-toolbar dense color="#0B0636" dark>
-      <v-toolbar-title class="pl-12">MY FARM ANIMALS</v-toolbar-title>
+      <v-toolbar-title class="title pl-12">MY FARM ANIMALS</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
@@ -31,9 +31,11 @@
         <h2>k500</h2>
       </v-subheader>
 
-      <v-btn class="ma-2" outlined color="#53C351" rounded>Withdraw</v-btn>
+      <v-btn class="ma-2" small outlined color="#53C351" rounded
+        >Withdraw</v-btn
+      >
 
-      <v-btn class="ma-2" color="#53C351" rounded>Buy Feed</v-btn>
+      <v-btn class="ma-2" color="#53C351" small rounded>Buy Feed</v-btn>
     </v-toolbar>
 
     <div class="background">
@@ -97,7 +99,6 @@ export default {};
   background: url("../assets/Frame.png");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
 }
 .card-1 {
   height: 400px;
@@ -121,5 +122,18 @@ export default {};
   color: #fff;
   font-size: 18px;
   font-weight: 500;
+}
+@media screen and (max-width: 425px) {
+  .greeting {
+    display: none;
+  }
+  .title {
+    display: none;
+  }
+}
+@media screen and (max-width: 320px) {
+  .v-subheader {
+    padding: 0px !important;
+  }
 }
 </style>

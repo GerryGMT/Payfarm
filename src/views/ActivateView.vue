@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <v-app-bar app color="#fff" flat>
-      <div class="d-flex align-center pa-6">
+      <div class="d-flex align-center">
         <v-img
           lazy-src="../assets/foot.svg"
           max-height="140"
@@ -12,10 +12,8 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="/signin">
-        <div class="pa-4">
-          <v-btn color="#53C351" height="35" dark> Login </v-btn>
-        </div>
+      <router-link to="/signin" tag="span">
+        <v-btn color="#53C351" height="35" dark> Login </v-btn>
       </router-link>
     </v-app-bar>
 
@@ -66,11 +64,10 @@ export default {};
 
 <style>
 .signin {
-  height: 90vh;
+  height: 100%;
   background: url("../assets/Frame.png");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow-x: hidden;
 }
 .form {
   height: auto;

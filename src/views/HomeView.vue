@@ -12,7 +12,7 @@
 
       <v-spacer></v-spacer>
 
-      <router-link to="/registration">
+      <router-link to="/registration" tag="span">
         <v-btn color="#53C351" height="35" dark> Login </v-btn>
       </router-link>
     </v-app-bar>
@@ -362,7 +362,7 @@
             style="color: #fff; font-size: 15px; opacity: 0.8; font-weight: 300"
             class="footer-text"
           >
-            The best way to make invetments
+            The best way to make investments
           </h5>
         </v-col>
       </v-row>
@@ -505,7 +505,7 @@ export default {
   gap: 30px;
 }
 .v-icon {
-  color: #fff;
+  color: #fff !important;
 }
 .section-2 {
   margin: auto !important;
