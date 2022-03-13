@@ -434,7 +434,6 @@ section {
   flex: 1;
   position: relative;
 }
-
 .title {
   position: absolute;
   top: 0;
@@ -446,23 +445,11 @@ section {
   justify-content: center;
   align-items: center;
 }
-
 .heading {
   color: #fff;
   text-align: center;
   text-decoration-style: bold;
   font-size: 56px;
-}
-@media screen and (max-width: 425px) {
-  p {
-    line-height: 1rem !important;
-  }
-  .heading {
-    font-size: 18px;
-  }
-  .subheading {
-    font-size: 10px !important;
-  }
 }
 .subheading {
   color: #fff;
@@ -563,5 +550,16 @@ section {
 }
 .packages {
   background-color: #e5e5e5;
+}
+@media screen and (max-width: 425px) {
+  p {
+    line-height: 1rem !important;
+  }
+  .heading {
+    font-size: 18px;
+  }
+  .subheading {
+    font-size: 10px !important;
+  }
 }
 </style>
