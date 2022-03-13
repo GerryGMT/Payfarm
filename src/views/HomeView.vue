@@ -19,23 +19,33 @@
 
     <v-layout column wrap>
       <v-flex xs12 md3
-        ><div class="background">
-          <div class="heading mt-16">
-            <p>Empowering Farming</p>
-            <p>through Technology</p>
+        ><section>
+          <div class="animation">
+            <lottie
+              :options="defaultOptions"
+              v-on:animCreated="handleAnimation"
+            >
+            </lottie>
           </div>
-          <div class="subheading">
-            <p>
-              We help realize your dreams of investing in Agriculture,<br />
-              let's start with small things that can change the world,<br />
-              so we can live happy and abundant lives.<br />
-            </p>
-            <p>
-              Feeding the animal makes the animal grow and later<br />
-              sell it on the site and earn profits
-            </p>
+          <div class="title">
+            <header class="heading">
+              <p>Empowering Farming</p>
+              <p>through Technology</p>
+            </header>
+
+            <div class="subheading">
+              <p>
+                We help realize your dreams of investing in Agriculture,<br />
+                let's start with small things that can change the world,<br />
+                so we can live happy and abundant lives.<br />
+              </p>
+              <p>
+                Feeding the animal makes the animal grow and later<br />
+                sell it on the site and earn profits
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
 
         <v-container>
           <v-row justify="center" align="center">
@@ -399,32 +409,67 @@
 </template>
 
 <script>
+import Lottie from "../LottieView.vue";
+import * as animationData from "../assets/payfarm.json";
 export default {
-  data: () => ({
-    home: "Here there is the home page!",
-  }),
+  name: "app",
+  components: {
+    lottie: Lottie,
+  },
+  data() {
+    return {
+      defaultOptions: { animationData: animationData },
+      animationSpeed: 1,
+    };
+  },
 };
 </script>
 
 <style scoped>
-.background {
-  height: 100%;
-  background: url("../assets/Frame.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  overflow-x: hidden;
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  position: relative;
 }
+
+.title {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .heading {
   color: #fff;
   text-align: center;
   text-decoration-style: bold;
   font-size: 56px;
 }
+@media screen and (max-width: 425px) {
+  p {
+    line-height: 1rem !important;
+  }
+  .heading {
+    font-size: 18px;
+  }
+  .subheading {
+    font-size: 10px !important;
+  }
+}
 .subheading {
   color: #fff;
   text-align: center;
   text-decoration-style: bold;
   font-size: 18px;
+  z-index: 1000;
 }
 .heading-3 {
   color: #61bd5b;
