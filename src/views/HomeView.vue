@@ -448,8 +448,11 @@ section {
 .heading {
   color: #fff;
   text-align: center;
-  text-decoration-style: bold;
   font-size: 56px;
+}
+.heading p {
+  padding: 30px 0px;
+  margin-bottom: 16px;
 }
 .subheading {
   color: #fff;
@@ -458,6 +461,7 @@ section {
   font-size: 18px;
   z-index: 1000;
 }
+
 .heading-3 {
   color: #61bd5b;
   text-align: center !important;
@@ -554,6 +558,8 @@ section {
 @media screen and (max-width: 425px) {
   p {
     line-height: 1rem !important;
+    padding: 5px 0px !important;
+    margin-bottom: 3px !important;
   }
   .heading {
     font-size: 18px;
