@@ -20,11 +20,12 @@
     <v-layout column wrap>
       <v-flex xs12 md3
         ><section>
-          <div class="animation">
-            <lottie
-              :options="defaultOptions"
-              v-on:animCreated="handleAnimation"
-            >
+          <div class="large">
+            <lottie :options="largeScreens" v-on:animCreated="handleAnimation">
+            </lottie>
+          </div>
+          <div class="small">
+            <lottie :options="mobile" v-on:animCreated="handleAnimation">
             </lottie>
           </div>
           <div class="title">
@@ -410,7 +411,8 @@
 
 <script>
 import Lottie from "../LottieView.vue";
-import * as animationData from "../assets/payfarm.json";
+import animationData1 from "../assets/payfarm.json";
+import animationData2 from "../assets/mobile.json";
 export default {
   name: "app",
   components: {
@@ -418,7 +420,8 @@ export default {
   },
   data() {
     return {
-      defaultOptions: { animationData: animationData },
+      largeScreens: { animationData: animationData1 },
+      mobile: { animationData: animationData2 },
       animationSpeed: 1,
     };
   },
@@ -555,17 +558,33 @@ section {
 .packages {
   background-color: #e5e5e5;
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 768px) {
+  .heading p {
+    padding: 10px 0px;
+  }
+  .heading {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 550px) {
   p {
     line-height: 1rem !important;
     padding: 5px 0px !important;
     margin-bottom: 3px !important;
   }
   .heading {
-    font-size: 18px;
+    font-size: 32px;
   }
   .subheading {
-    font-size: 10px !important;
+    font-size: 16px !important;
+  }
+  .large {
+    display: none;
+  }
+}
+@media screen and (min-width: 551px) {
+  .small {
+    display: none;
   }
 }
 </style>
